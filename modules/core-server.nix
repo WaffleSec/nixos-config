@@ -43,6 +43,10 @@
     openFirewall = true;
   };
 
+  services.tailscale = {
+    enabled = true;
+  };
+
   services.avahi = {
     enable = true;
     nssmdns4 = true;
