@@ -26,7 +26,7 @@
           set -agF status-right "#{E:@catppuccin_status_ram}"
           set -ag status-right "#{E:@catppuccin_status_session}"
           set -ag status-right "#{E:@catppuccin_status_uptime}"
-	  set -agF status-right "#{E:@catppuccin_status_battery}"
+      	  set -agF status-right "#{E:@catppuccin_status_weather}"
         '';
       }
       {
@@ -47,6 +47,10 @@
       }
       {
         plugin = battery;
+      }
+      {
+        plugin = weather;
+        extraConfig = "set -g @tmux-weather-units 'u'";
       }
     ];
   };

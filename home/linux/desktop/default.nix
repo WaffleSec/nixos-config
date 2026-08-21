@@ -29,12 +29,16 @@
 
   programs.zed-editor = {
     enable = true;
+    installRemoteServer = true;
     mutableUserSettings = true;
-
+    
     userSettings = {
+      project_panel = {
+        dock = "left";
+      };
       languages = {
         Python = {
-	  formatter.language_server.name = "ruff";
+	        formatter.language_server.name = "ruff";
           language_servers = [
             "ty"
             "ruff"
@@ -43,8 +47,8 @@
             "!pyright"
             "!pylsp"
           ];
-	};
-	Rust = {
+	      };
+	      Rust = {
           hard_tabs = false;
           formatter.language_server.name = "rust-analyzer";
           language_servers = [
@@ -74,7 +78,6 @@
       "html"
       "catppuccin"
     ];
-
   };
 
   catppuccin.zed = {

@@ -1,4 +1,4 @@
-{config, ...} @ args:
+{ config, pkgs, ...} @ args:
 
 {
   imports = [
@@ -49,7 +49,12 @@
     hostName = "wafflenovo";
     wireless.enable = true;
 
-    networkmanager.enable = true;
+    networkmanager = {
+      enable = true;
+      plugins = with pkgs; [
+        networkmanager-openvpn
+      ];
+    };
   };
 
   virtualisation.docker.storageDriver = "btrfs";

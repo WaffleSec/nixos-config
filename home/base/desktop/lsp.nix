@@ -57,14 +57,12 @@
 
           #-- python
           uv # python project package manager
+          ruff
+          ty
           (python314.withPackages (
             ps: with ps; [
-              # python language server
-              ty
-              ruff
-
               # my commonly used python packages
-	      pwntools
+	            pwntools
               jupyter
               ipython
               pandas
@@ -126,6 +124,7 @@
 
         #-- Optional Requirements:
         prettier # common code formatter
+        color-lsp
         fzf
         gdu # disk usage analyzer, required by AstroNvim
         (ripgrep.override { withPCRE2 = true; }) # recursively searches directories for a regex pattern
