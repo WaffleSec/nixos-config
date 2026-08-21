@@ -52,6 +52,20 @@
     networkmanager.enable = true;
   };
 
+  fileSystems = {
+    "/mnt/misc" = {
+      device = "/dev/disk/by-uuid/a14a996c-be9d-4a12-9241-8c3a8349f136";
+      fsType = "ext4";
+      options = [ "nofail" ];
+    };
+    "/mnt/vms" = {
+      device = "/dev/disk/by-uuid/4ff594cd-294a-4e4c-be22-ce512c297c39";
+      fsType = "ext4";
+      options = [ "nofail" ];  
+    };
+  };
+  
+
   virtualisation.docker.storageDriver = "btrfs";
 
   system.stateVersion = "26.05";

@@ -51,7 +51,8 @@
             ./hosts/wafflestation
             ./modules/nvidia.nix
             ./modules/plasma.nix
-            catppuccin.nixosModules.cappuccin
+            ./modules/steam.nix
+            catppuccin.nixosModules.catppuccin
           ];
           home-module = import ./home/linux/desktop-plasma.nix;
         };
