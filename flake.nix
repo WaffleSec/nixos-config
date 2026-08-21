@@ -29,7 +29,7 @@
   outputs = inputs@{ self, nixpkgs, nixpkgs-unstable, home-manager, nixos-generators, catppuccin, ...}:
     let
       username = "waffles";
-      userfullname = "Waffles";
+      userfullname = "WaffleSec";
       useremail = "me@waffles.sh";
 
       x64_system = "x86_64-linux";
@@ -44,7 +44,7 @@
             ./modules/plasma.nix
             catppuccin.nixosModules.catppuccin
           ];
-          home-module = import ./home/linux/laptop-plasma.nix;
+          home-module = import ./home/linux/desktop-plasma.nix;
         };
         wafflestation_modules = {
           nixos-modules = [

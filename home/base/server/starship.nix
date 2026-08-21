@@ -45,9 +45,5 @@
         "$character"
       ];
     };
-    cmd_duration = {
-      enabled = true;
-      show_notifications = false;
-    };
   };
 }
