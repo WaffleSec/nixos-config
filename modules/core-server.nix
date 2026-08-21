@@ -44,7 +44,7 @@
   };
 
   services.tailscale = {
-    enabled = true;
+    enable = true;
   };
 
   services.avahi = {
