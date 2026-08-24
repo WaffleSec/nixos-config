@@ -59,8 +59,13 @@
           uv # python project package manager
           ruff
           ty
+          basedpyright
           (python314.withPackages (
             ps: with ps; [
+              #More LSPs
+              python-lsp-server
+              pylsp-mypy
+
               # my commonly used python packages
 	            pwntools
               jupyter
@@ -81,6 +86,7 @@
           cargo # rust package manager
           rustfmt
           clippy # rust linter
+          package-version-server # rust package version LSP
 
           #-- golang
           go

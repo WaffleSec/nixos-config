@@ -32,6 +32,17 @@
   };
 
   networking.firewall.enable = lib.mkDefault false;
+  networking.resolvconf.enable = false;
+
+  services.resolved = {
+    enable = true;
+    settings.Resolve = {
+      FallbackDNS = [
+        "94.140.14.14"
+        "94.140.15.15"
+      ];
+    };
+  };
 
   services.openssh = {
     enable = lib.mkDefault true;

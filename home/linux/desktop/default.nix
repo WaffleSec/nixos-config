@@ -40,12 +40,12 @@
         Python = {
 	        formatter.language_server.name = "ruff";
           language_servers = [
-            "ty"
+            "!ty"
             "ruff"
             "!basedpyright"
             "!pyrefly"
             "!pyright"
-            "!pylsp"
+            "pylsp"
           ];
 	      };
 	      Rust = {
