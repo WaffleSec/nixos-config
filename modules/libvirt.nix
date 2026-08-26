@@ -5,6 +5,7 @@
     libvirtd = {
       enable = true;
       qemu.runAsRoot = true;
+      qemu.vhostUserPackages = [ pkgs.virtiofsd ];
     };
   };
   programs.dconf.enable = true;
@@ -12,6 +13,7 @@
     virt-manager
     qemu_kvm
     qemu_full
+    virtiofsd
   ];
   boot.kernelModules = ["kvm-amd" "kvm-intel"];
   boot.extraModprobeConfig = "options kvm_intel nested=1";
