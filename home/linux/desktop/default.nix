@@ -8,6 +8,7 @@
   home.packages = with pkgs; [
     # GUI apps
     firefox # Web browser
+    thunderbird # Email client
     insomnia # REST client
     wireshark # network analyzer
     obsidian # note taking
