@@ -42,6 +42,7 @@
           nixos-modules = [
             ./hosts/wafflenovo
             ./modules/plasma.nix
+            ./modules/teamviewer.nix
             catppuccin.nixosModules.catppuccin
           ];
           home-module = import ./home/linux/desktop-plasma.nix;
