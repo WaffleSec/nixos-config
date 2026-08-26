@@ -82,6 +82,7 @@
           #-- rust
           # we'd better use the rust-overlays for rust development
           rustc
+          rustup
           rust-analyzer
           cargo # rust package manager
           rustfmt
