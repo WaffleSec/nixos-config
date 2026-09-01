@@ -41,19 +41,12 @@
         wafflenovo_modules = {
           nixos-modules = [
             ./hosts/wafflenovo
-            ./modules/plasma.nix
-            ./modules/teamviewer.nix
-            catppuccin.nixosModules.catppuccin
           ];
           home-module = import ./home/linux/desktop-plasma.nix;
         };
         wafflestation_modules = {
           nixos-modules = [
             ./hosts/wafflestation
-            ./modules/nvidia.nix
-            ./modules/plasma.nix
-            ./modules/steam.nix
-            catppuccin.nixosModules.catppuccin
           ];
           home-module = import ./home/linux/desktop-plasma.nix;
         };

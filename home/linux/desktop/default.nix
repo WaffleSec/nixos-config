@@ -65,8 +65,12 @@
           ];
         };
       };
-      load_direnv = "shell_hook";
+      load_direnv = "direct";
       base_keymap = "VSCode";
+      terminal = {
+        font_family = "JetBrainsMono Nerd Font";
+        font_size = 14;
+      };
     };
     extensions = [
       "nix"

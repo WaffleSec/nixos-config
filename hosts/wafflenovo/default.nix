@@ -1,13 +1,17 @@
-{ config, pkgs, ...} @ args:
+{ catppuccin, config, pkgs, ...} @ args:
 
 {
   imports = [
     ./hardware-configuration.nix
 
+    ../../modules/intel.nix
     ../../modules/fhs-fonts.nix
     ../../modules/libvirt.nix
     ../../modules/core-desktop.nix
     ../../modules/user-group.nix
+    ../../modules/plasma.nix
+    ../../modules/teamviewer.nix
+    catppuccin.nixosModules.catppuccin
   ];
 
   boot.binfmt.emulatedSystems = ["aarch64-linux" "riscv64-linux"];
