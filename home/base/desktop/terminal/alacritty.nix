@@ -25,9 +25,9 @@
     settings = {
       terminal = {
         shell = {
-	  program = "${pkgs.zsh}/bin/zsh";
-	  args = ["--login"];
-	};
+	      program = "${pkgs.nushell}/bin/nu";
+	      args = ["--login"];
+	      };
       };
       window = {
         opacity = 0.93;

@@ -10,6 +10,7 @@
   environment.shells = with pkgs; [
     bash
     zsh
+    nushell
   ];
 
   users.defaultUserShell = pkgs.bash;
