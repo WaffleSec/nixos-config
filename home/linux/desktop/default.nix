@@ -43,10 +43,10 @@
           language_servers = [
             "!ty"
             "ruff"
-            "!basedpyright"
+            "basedpyright"
             "!pyrefly"
             "!pyright"
-            "pylsp"
+            "!pylsp"
           ];
 	      };
 	      Rust = {

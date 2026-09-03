@@ -41,6 +41,7 @@
         "94.140.14.14"
         "94.140.15.15"
       ];
+      MulticastDNS = "yes";
     };
   };
 
@@ -55,12 +56,6 @@
   };
   
   services.netbird.enable = true;
-
-  services.avahi = {
-    enable = true;
-    nssmdns4 = true;
-    openFirewall = true;
-  };
 
   services = {
     power-profiles-daemon = {
