@@ -7,6 +7,7 @@
     ../../modules/intel.nix
     ../../modules/fhs-fonts.nix
     ../../modules/libvirt.nix
+    ../../modules/nfs-mounts.nix
     ../../modules/core-desktop.nix
     ../../modules/user-group.nix
     ../../modules/plasma.nix

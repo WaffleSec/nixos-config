@@ -6,6 +6,7 @@
 
     ../../modules/fhs-fonts.nix
     ../../modules/libvirt.nix
+    ../../modules/nfs-server.nix
     ../../modules/nvidia.nix
     ../../modules/plasma.nix
     ../../modules/steam.nix
