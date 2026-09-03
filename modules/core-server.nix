@@ -53,10 +53,8 @@
     };
     openFirewall = true;
   };
-
-  services.tailscale = {
-    enable = true;
-  };
+  
+  services.netbird.enable = true;
 
   services.avahi = {
     enable = true;
@@ -76,6 +74,7 @@
     curl
     aria2
     git
+    netbird-ui
 
     (
       let
