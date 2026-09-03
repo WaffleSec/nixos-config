@@ -42,6 +42,7 @@
         "94.140.15.15"
       ];
       MulticastDNS = "resolve";
+      LLMNR = "no";
     };
   };
 
