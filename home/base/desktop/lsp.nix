@@ -62,10 +62,6 @@
           basedpyright
           (python314.withPackages (
             ps: with ps; [
-              #More LSPs
-              python-lsp-server
-              pylsp-mypy
-
               # my commonly used python packages
 	            pwntools
               jupyter

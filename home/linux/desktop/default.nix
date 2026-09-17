@@ -14,6 +14,7 @@
     obsidian # note taking
     audacity # audio analysis
     vlc # audio and video player
+    ghidra # reverse engineering
     
     # e-book viewer(.epub/.mobi/...)
     # do not support .pdf
@@ -28,12 +29,29 @@
     freerdp # required by remmina
   ];
 
+  programs.claude-code = {
+    enable = true;
+    settings = {
+      includeCoAuthoredBy = false;
+      model = "claude-sonnet-5";
+      theme = "dark";
+    };
+  };
+
   programs.zed-editor = {
     enable = true;
     installRemoteServer = true;
     mutableUserSettings = true;
     
     userSettings = {
+      agent_servers = {
+        "claude-acp" = {
+          type = "registry";
+          env = {
+            CLAUDE_CODE_EXECUTABLE = "${pkgs.claude-code}/bin/claude";
+          };
+        };
+      };
       project_panel = {
         dock = "left";
       };

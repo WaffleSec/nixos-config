@@ -4,8 +4,11 @@
   virtualisation = {
     libvirtd = {
       enable = true;
-      qemu.runAsRoot = true;
-      qemu.vhostUserPackages = [ pkgs.virtiofsd ];
+      qemu = {
+        swtpm.enable = true;
+        runAsRoot = true;
+        vhostUserPackages = [ pkgs.virtiofsd ];
+      };
     };
   };
   programs.dconf.enable = true;
